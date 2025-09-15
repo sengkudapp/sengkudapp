@@ -1,21 +1,16 @@
-// Impor fungsi yang Anda perlukan dari SDK yang Anda perlukan
+// firebaseConfig.ts
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// ==========================================================================================
-// !!! PENTING !!!
-// GANTI SEMUA NILAI DI BAWAH INI DENGAN KONFIGURASI PROYEK FIREBASE ANDA.
-// Anda bisa mendapatkan ini dari Firebase Console -> Project Settings -> General -> Your apps.
-// Jika nilai-nilai ini tidak diisi dengan benar, APLIKASI TIDAK AKAN BERFUNGSI.
-// ==========================================================================================
 const firebaseConfig = {
-  apiKey: "AIzahCyic0HWrg", // <-- GANTI INI
-  authDomain: "sengkud.com",      // <-- GANTI INI
-  projectId: "sengk219",                       // <-- GANTI INI
-  storageBucket: "storage.app",       // <-- GANTI INI
-  messagingSenderId: "5392285",      // <-- GANTI INI
-  appId: "1:587782d954"   // <-- GANTI INI
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Inisialisasi Firebase
