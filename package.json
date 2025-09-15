@@ -1,7 +1,7 @@
 {
-  "name": "majelis-sengkud-base-i-sengkudapp-i-online-3",
+  "name": "majelis-sengkud-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,17 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.12.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "./LoginScreen": "latest",
-    "./firebaseConfig": "latest",
-    "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js": "latest",
-    "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js": "latest",
-    "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js": "latest"
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   }
 }
