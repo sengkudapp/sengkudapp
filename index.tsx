@@ -92,7 +92,9 @@ const App = () => {
         if (docSnap.exists()) {
           const data = docSnap.data();
           setLinks(data.links || []);
-          setAlbumPhotos(data.albumPhotos || []);
+          // Urutkan foto dari yang terbaru (ID terbesar) ke yang terlama
+          const sortedPhotos = (data.albumPhotos || []).sort((a: AlbumItem, b: AlbumItem) => b.id - a.id);
+          setAlbumPhotos(sortedPhotos);
           setAboutUsText(data.aboutUsText || 'Konten "Tentang Kami" bisa diubah di panel admin.');
           setAnnouncementText(data.announcementText || '');
           setSectionVisibility(data.sectionVisibility || initialVisibilityState);
@@ -278,7 +280,8 @@ const App = () => {
       newAlbumPhotos = albumPhotos.map(p => p.id === editingAlbumId ? { ...p, ...albumFormData } : p);
       action = `Memperbarui foto di album: "${albumFormData.description || 'Tanpa deskripsi'}".`;
     } else {
-      newAlbumPhotos = [...albumPhotos, { id: Date.now(), ...albumFormData }];
+      // Tambahkan foto baru ke awal array agar muncul paling atas
+      newAlbumPhotos = [{ id: Date.now(), ...albumFormData }, ...albumPhotos];
       action = `Menambahkan foto baru ke album: "${albumFormData.description || 'Tanpa deskripsi'}".`;
     }
     setAlbumPhotos(newAlbumPhotos);
