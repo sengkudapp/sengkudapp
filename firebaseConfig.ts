@@ -10,12 +10,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebas
 // Jika nilai-nilai ini tidak diisi dengan benar, APLIKASI TIDAK AKAN BERFUNGSI.
 // ==========================================================================================
 const firebaseConfig = {
-  apiKey: "AIzaSyADosrww3hCyiFFnqqlxRLayliaSc0HWrg", // <-- GANTI INI
-  authDomain: "sengkudapp-1c219.firebaseapp.com",      // <-- GANTI INI
-  projectId: "sengkudapp-1c219",                       // <-- GANTI INI
-  storageBucket: "sengkudapp-1c219.firebasestorage.app",       // <-- GANTI INI
-  messagingSenderId: "531323092285",      // <-- GANTI INI
-  appId: "1:531323092285:web:50cc6eec3f73187782d954"   // <-- GANTI INI
+  apiKey: "AIzahCyic0HWrg", // <-- GANTI INI
+  authDomain: "sengkud.com",      // <-- GANTI INI
+  projectId: "sengk219",                       // <-- GANTI INI
+  storageBucket: "storage.app",       // <-- GANTI INI
+  messagingSenderId: "5392285",      // <-- GANTI INI
+  appId: "1:587782d954"   // <-- GANTI INI
 };
 
 // Inisialisasi Firebase
